@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Pricing</title>
+<style>
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+        box-sizing: border-box;
+    }
+    table{
+        border: none;
+    }
+    table tr td{
+        padding: 0.3rem 0;
+    }
+    table tr td ul{
+        padding-left: 0;
+    }
+    table tr td ul li{
+        list-style-type: none;
+        list-style-position: inside;
+    }
+    table tr td:nth-of-type(2n+1){
+        background-color: #f0f0f0;
+        padding-left: 0.5rem;
+    }
+    #footer td{
+        background-color: #ffffff;
+    } 
+</style>
+
+<script>
+
+</script>
+</head>
+
+<body>
+
+    <form action="">
+    <table>
+        <th>Computer Pricing</th>
+        <tr>
+            <td>Base Price:</td>
+            <td>$1,000</td>
+        </tr>
+        <tr>
+            <td>Processor:</td>
+                <td>
+                    <ul>
+                        <li><input type="radio" name="Processor" id="Processor1"> 1.5 GHz</li>
+                        <li><input type="radio" name="Processor" id="Processor2"> 2.0 GHz (add $400)</li>
+                        <li><input type="radio" name="Processor" id="Processor3"> 3.0 GHz (add $600)</li>
+                    </ul>
+                </td>
+        </tr>
+        <tr>
+            <td>Hard Drive:</td>
+                <td>
+                    <ul>
+                        <li><input type="radio" name="HardDrive" id="HardDrive1"> 40 GB</li>
+                        <li><input type="radio" name="HardDrive" id="HardDrive2"> 80 GB (add $200)</li>
+                        <li><input type="radio" name="HardDrive" id="HardDrive3"> 1000 GB (add $400)</li>
+                    </ul>
+                </td>
+            </td>
+        </tr>
+        <tr>
+            <td>Memory:</td>
+            <td>
+                <select name="Memory" id="Memory">
+                    <option value="0">1024 MB</option>
+                    <option value="300">2048 MB (add $300)</option>
+                    <option value="500"> 4096 MB (add $500)</option>
+                    <option value="700">8192 MB (add $700)</option>
+                </select>
+            </td>
+
+        </tr>
+        <tr>
+            <td>Network Card:</td>
+            <td>
+                <input type="checkbox" value="70" id="NetworkCard" name="NetworkCard">
+                <label for="NetworkCard">(add $70)</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Modem:</td>
+            <td>
+                <input type="checkbox" name="Modem" id="Modem" value="50">
+                <label for="Modem">(add $50)</label>
+            </td>
+        </tr>
+        <tfoot id="footer">
+            <td>
+                <input type="button" value="Total Price" onclick="GetTotal()">
+            </td>
+            <td>
+                <input type="text" value="" id=TotalPrice>
+    
+            </td>
+        </tfoot>
+
+
+    </table>
+    </form>
+    
+</body>
+</html>
