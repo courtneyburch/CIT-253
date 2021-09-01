@@ -32,8 +32,51 @@
     } 
 </style>
 
-<script>
+<script type="text/javascript">
+function GetTotal(){
+    var processorPrice = 0;
+    var hardDrivePrice = 0;
+    var memoryPrice = 0;
+    var networkCardPrice = 0;
+    var modemPrice = 0;
+    var totalPrice = 0;
+    var i;
 
+//get processor price
+    for(i=1; i<=3; i++){
+        if(document.getElementById("Processor" + i).checked){
+        processorPrice = parseInt(document.getElementById("Processor" + i).value);
+        }
+    }
+//get hard drive price
+    for(i=1; i<=3; i++){
+        if(document.getElementById("HardDrive" + i).checked){
+        hardDrivePrice = parseInt(document.getElementById("HardDrive" + i).value);
+        }   
+    }
+//get memory price
+    i = document.getElementById("Memory").selectedIndex;
+    memoryPrice = parseInt(document.getElementById("Memory")[i].value);
+
+//get network card price
+    if(document.getElementById("NetworkCard").checked){
+        networkCardPrice = parseInt(document.getElementById("NetworkCard").value);
+
+    } else{
+    networkCardPrice = 0;
+    }
+//get modem price
+    if(document.getElementById("Modem").checked){
+    modemPrice = parseInt(document.getElementById("Modem").value);
+    } else{
+    modemPrice = 0;
+    }
+
+//get total price
+    totalPrice = 1000 + processorPrice + hardDrivePrice + memoryPrice + networkCardPrice + modemPrice;
+
+    document.getElementById("TotalPrice").value =  "$" + totalPrice;
+}
 </script>
 </head>
 
@@ -50,9 +93,9 @@
             <td>Processor:</td>
                 <td>
                     <ul>
-                        <li><input type="radio" name="Processor" id="Processor1"> 1.5 GHz</li>
-                        <li><input type="radio" name="Processor" id="Processor2"> 2.0 GHz (add $400)</li>
-                        <li><input type="radio" name="Processor" id="Processor3"> 3.0 GHz (add $600)</li>
+                        <li><input type="radio" name="Processor" id="Processor1" value="0"> 1.5 GHz</li>
+                        <li><input type="radio" name="Processor" id="Processor2" value="400"> 2.0 GHz (add $400)</li>
+                        <li><input type="radio" name="Processor" id="Processor3" value="600"> 3.0 GHz (add $600)</li>
                     </ul>
                 </td>
         </tr>
@@ -60,9 +103,9 @@
             <td>Hard Drive:</td>
                 <td>
                     <ul>
-                        <li><input type="radio" name="HardDrive" id="HardDrive1"> 40 GB</li>
-                        <li><input type="radio" name="HardDrive" id="HardDrive2"> 80 GB (add $200)</li>
-                        <li><input type="radio" name="HardDrive" id="HardDrive3"> 1000 GB (add $400)</li>
+                        <li><input type="radio" name="HardDrive" id="HardDrive1" value="0"> 40 GB</li>
+                        <li><input type="radio" name="HardDrive" id="HardDrive2" value="200"> 80 GB (add $200)</li>
+                        <li><input type="radio" name="HardDrive" id="HardDrive3" value="400"> 1000 GB (add $400)</li>
                     </ul>
                 </td>
             </td>
@@ -99,7 +142,7 @@
                 <input type="button" value="Total Price" onclick="GetTotal()">
             </td>
             <td>
-                <input type="text" value="" id=TotalPrice>
+                <input type="text" value="" id="TotalPrice">
     
             </td>
         </tfoot>
