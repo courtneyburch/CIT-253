@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!-- CIT 253 Assignment 4 Courtney Burch Sept. 15 20221 -->
+<body>
+    <form action="display_paycheck.php" method="POST">
+    <table>
+        
+        <th colspan="2">Please Enter Employee Information:</th>
+<!-- User inputs information -->
+        <tr>
+            <td><label for="first_name">First Name:</label></td>
+            <td><input type="text" id="first_name" name="first_name"></td>
+        </tr>
+        <tr>
+            <td><label for="last_name">Last Name:</label></td>
+            <td><input type="text" id="last_name" name="last_name"></td>
+        </tr>
+
+        <tr>
+            <td><label for="hours_worked">Weekly Hours Worked:</label></td>
+            <td><input type="text" id="hours_worked" name="hours_worked"></td>
+        </tr>
+        <tr>    
+            <td><label for="pay_rate">Hourly Rate $:</label></td>
+            <td><input type="text" id="pay_rate" name="pay_rate"></td>
+        </tr>
+       
+        
+        <tr>
+            <td><input type="submit" value="Submit"></td>
+            <td><input type="reset" value="Reset"></td>
+        </tr>
+
+    </table>
+
+
+    </form>
+    
+</body>
+</html>
