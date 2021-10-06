@@ -35,7 +35,7 @@
         //net pay
         $netPay = number_format($grossPay, 2) - number_format($totalTax, 2);
 
-    print "Hello $firstName $lastName, this week you worked $hoursWorked hours. Based on the pay rate of $payRate per hour, your paycheck information is:";
+    print "Hello $firstName $lastName. This week you worked $hoursWorked hours. Based on the pay rate of $payRate per hour, your paycheck information is:";
 
     ?>
     </p>

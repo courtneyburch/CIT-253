@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!-- CIT 253 Assignment 5 Courtney Burch Oct 6 2021 -->
+<body>
+    <form action="display_user_input.php" method="POST">
+    <table>
+        
+        <th colspan="2">Please Enter Your Information:</th>
+<!-- User inputs information -->
+        <tr>
+            <td><label for="full_name">Full Name:</label></td>
+            <td><input type="text" id="full_name" name="full_name"></td>
+        </tr>
+
+        <tr>
+            <td><label for="phone_num">Phone Number:</label></td>
+            <td><input type="text" id="phone_num" name="phone_num"></td>
+        </tr>
+        <tr>    
+            <td><label for="email_address">Email Address:</label></td>
+            <td><input type="text" id="email_address" name="email_address"></td>
+        </tr>
+
+        <tr>    
+            <td><label for="notes">Notes:</label></td>
+            <td><textarea id="notes" name="notes" rows="10" cols="30"></textarea></td>
+        </tr>
+       
+        
+        <tr>
+            <td><input type="submit" value="Submit"></td>
+            <td><input type="reset" value="Reset"></td>
+        </tr>
+
+    </table>
+
+
+    </form>
+    
+</body>
+</html>
