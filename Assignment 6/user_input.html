@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<!-- CIT 253 Assignment 6 Courtney Burch Oct 25 2021 -->
+<body>
+    <h1 class='title'>The Coffee House</h1>
+    <h3 class = 'subtitle'>Order Form</h3>
+    
+    <form action="display_order.php" method="POST">
+        
+    <table class='order-form'>
+        
+        <tr>
+        <!-- select coffee type -->
+            <td><label for="coffee-select">Select Coffee:</label></td>
+            <td><select name="coffee" id="coffee-select">
+                <option value="">--Please select an option--</option>
+                <option value="boca-villa">Boca Villa $7.99/pound</option>
+                <option value="south-beach-rhythm">South Beach Rhythm $8.99/pound</option>
+                <option value="pumpkin-paradise">Pumpkin Paradise $8.99/pound</option>
+                <option value="sumatran-sunset">Sumatran Sunset $9.99/pound</option>
+                <option value="bali-batur">Bali Batur $10.95/pound</option>
+                <option value="double-dark">Double Dark $9.95/pound</option>
+            </select>
+             </td>
+        </tr>
+
+        <tr>
+            <!-- select caffeination -->
+            <td>Type:</td>
+            <td>
+                <input type="radio" name="coffee-type" id="regular" value="regular">
+                <label for="regular">Regular</label>
+                <br>
+                <input type="radio" name="coffee-type" id="decaf" value="decaf">
+                <label for="decaf">Decaffeinated (+ $1/pound)</label>
+            </td>
+        </tr>
+
+        <tr>
+            <td><label for="quantity">Quantity (in pounds):</label></td>
+            <td><input type="number" id="quantity" name="quantity"></td>
+        </tr>
+
+        <tr>
+            <td><label for="name">Name:</label></td>
+            <td><input type="text" id="name" name="name"></td>
+        </tr>
+
+        <tr>    
+            <td><label for="email_address">Email Address:</label></td>
+            <td><input type="text" id="email_address" name="email_address"></td>
+        </tr>
+
+        <tr>
+            <td><label for="phone_num">Phone Number:</label></td>
+            <td><input type="text" id="phone_num" name="phone_num"></td>
+        </tr>
+        
+        <tr>    
+            <td><label for="address">Address:</label></td>
+            <td><input type="text" id="address" name="address"></td>
+        </tr>
+
+        <tr>    
+            <td><label for="city">City:</label></td>
+            <td><input type="text" id="city" name="city"></td>
+        </tr>
+
+        <tr>    
+            <td><label for="state">State:</label></td>
+            <td><input type="text" id="state" name="state"></td>
+        </tr>
+
+        <tr>    
+            <td><label for="zip">Zip:</label></td>
+            <td><input type="text" id="zip" name="zip"></td>
+        </tr>
+        
+        <tr>
+            <td><input type="submit" value="Submit"></td>
+            <td><input type="reset" value="Reset"></td>
+        </tr>
+
+    </table>
+
+
+    </form>
+    
+</body>
+</html>
