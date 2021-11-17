@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	font-family:'Times New Roman', Times, serif;
+}
+p{
+  width:40%;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:center;
+  font-weight: bold;
+  font-size: 20pt;
+}
+h1, h3{
+  text-align: center;
+  font-weight: bold;
+}
+table {
+  width:40%;
+  margin-left:auto;
+  margin-right:auto;
+  text-align:left;
+}
+
+td {
+  padding: 6px;
+  font-size:18px;
+  font-weight: bold;
+}
+
+tr:nth-of-type(1){
+  padding: 12px;
+  font-size:16px;
+  font-weight: bold;
+  font-size: 20px;
+}
+tr{
+  padding: 12px;
+  font-size:16px;
+  font-size: 20px;
+}
+.link{
+  margin: auto;
+  text-align: center;
+  padding-top: 10px
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  padding: 8px 12px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.title{
+  margin: 30px;
+  text-align: center;
+}
+.subtitle{
+  margin: 20px;
+  text-align: center;
+}
+.error{
+  color: red;
+}
+.order-form{
+  border: none;
+}
+.order-info tr td{
+  border: 1px solid black;
+
+}
